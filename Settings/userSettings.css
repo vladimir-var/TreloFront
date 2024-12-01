@@ -1,0 +1,196 @@
+#workspace-dropdown-toggle {
+    color: white;
+    background-color: #36363a;
+    border: 1px solid #36363a;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #workspace-dropdown-toggle:hover {
+    background-color: #323236;
+  }
+
+.account-button {
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .user-settings-container {
+    position: relative;
+    display: block;
+    overflow: visible;
+    width: 0px;
+    height: 0px;
+  }
+  
+  .user-settings {
+    position: absolute;
+    top: 0px;
+    transform: translateX(-80%);
+    width: 200px;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgb(34, 34, 36);
+
+    border-radius: 10px;
+  }
+  
+  .user-settings-button {
+    padding: 3px 3px 3px 3px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+.zindexmax {
+  z-index: 1000;
+}
+
+  .notifications-container-outer {
+    position: absolute;
+    top: 20px;
+    right: 160px;
+
+    width: 300px;
+    height: fit-content;
+    max-height: 500px;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+
+    border-radius: 30px 0px 0px 30px;
+
+    overflow-y: auto;
+  }
+
+  .notifications-container-inner {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+
+    padding: 20px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: rgb(53, 53, 54);
+  }
+
+  .notifications-container-outer::-webkit-scrollbar {
+    width: 10px; 
+    height: 12px; 
+    padding: 10px;
+  }
+  
+  .notifications-container-outer::-webkit-scrollbar-thumb {
+    background: #46464d; 
+    background-clip: border-box;
+  }
+  
+  .notifications-container-outer::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  .notifications-container-outer::-webkit-scrollbar-track {
+    background: #2e2c35; 
+  }
+  
+  .notifications-container-outer::-webkit-scrollbar-track:hover {
+    background: #2e2e2e; 
+  }
+  
+
+  .notification {
+    width: 100%;
+    min-height: 100px;
+    height: fit-content;
+    margin-bottom: 20px;
+
+    border-radius: 30px;
+
+    background-color: #232227;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    overflow: hidden;
+  }
+
+  .notification .header {
+    width: 100%;
+    height: 50px;
+
+    display: inline-flex;
+  }
+  .notification .header p {
+    margin-top: 3px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .notification .main {
+    width: 100%;
+    height: fit-content;
+
+    border-radius: 30px;
+    background-clip: border-box;
+
+    font-size: small;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .notification .main p {
+    margin: 0;
+  }
+
+  .notification .footer {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: start;
+
+    /* padding-left: 5px; */
+
+    font-size: small;
+    color: rgb(255, 255, 255);
+  }
+  .notification .footer button {
+    margin-right: 10px;
+    padding: 7px;
+
+    font-size: small;
+
+    min-width: 30px;
+  }
+
+  .request-type {
+    border-radius: 5px;
+    
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+
+    margin-right: 10px;
+  }
+
+  .request-type#friend {
+    color: #2f9621;
+    border: solid 1px #2f9621;
+  }
+  .request-type#board {
+    color: #c27818;
+    border: solid 1px #c27818;
+  }
+  
+

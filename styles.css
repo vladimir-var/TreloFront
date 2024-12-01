@@ -1,0 +1,1814 @@
+/* Main css code */
+
+@font-face {
+  font-family: "Florida Vibes";
+  src: url("/fonts/FloridaVibes.otf");
+}
+
+@font-face {
+  font-family: "Dearlove";
+  src: url("/fonts/Dearlove.ttf");
+}
+
+/*  */
+
+/* Work space css */
+
+html,
+body {
+  /* height: 100%; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+
+/* hr {
+    padding-right: 50px;
+} */
+
+.aside-line {
+  width: 90%;
+}
+
+aside {
+  width: 13%;
+  min-width: 170px;
+  height: 100vh;
+  padding-left: 15px;
+  float: left;
+  background-color: #2b2b2ee3;
+  color: white;
+}
+
+#aside-container {
+  width: 15%;
+}
+
+.header-main-text {
+  /* padding-top: 10px; */
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Florida Vibes";
+  cursor: pointer;
+}
+
+.aside-h-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+#project-title {
+  font-size: 30px;
+  /* Устанавливаем размер шрифта заголовка "Project Management" */
+  font-weight: 720;
+}
+
+.favorite-container {
+  float: right;
+  /* Размещаем элемент справа */
+  padding-right: 20px;
+  margin-bottom: 10px;
+  /* Добавляем небольшой отступ снизу */
+}
+
+#favorite-button {
+  background-color: transparent;
+  /* Устанавливаем прозрачный фон */
+  color: white;
+  /* Цвет текста */
+  border: none;
+  /* Убираем границу */
+  font-size: 30px;
+  /* Размер шрифта */
+  cursor: pointer;
+  /* Курсор при наведении */
+}
+
+#favorite-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Изменяем цвет фона на полупрозрачный белый при наведении */
+  color: #e8e105;
+}
+
+.participants-container {
+  display: flex;
+  /* Располагаем иконки участников в линию */
+  margin-top: 40px;
+  /* Добавляем небольшой отступ снизу */
+}
+
+#participant2 {
+  position: relative;
+  left: -40px;
+  top: 25px;
+
+  width: 50px;
+  /* Устанавливаем ширину блока для каждой иконки участника */
+  height: 50px;
+  /* Устанавливаем высоту блока для каждой иконки участника */
+  border-radius: 50%;
+  /* Создаем круглую форму для блока с помощью скругления углов */
+  overflow: hidden;
+  /* Обрезаем изображение участника, чтобы оно не выходило за пределы блока */
+}
+
+#participant1 {
+  width: 70px;
+  /* Устанавливаем ширину блока для каждой иконки участника */
+  height: 70px;
+  /* Устанавливаем высоту блока для каждой иконки участника */
+  border-radius: 50%;
+  /* Создаем круглую форму для блока с помощью скругления углов */
+  overflow: hidden;
+  /* Обрезаем изображение участника, чтобы оно не выходило за пределы блока */
+}
+
+.participant img {
+  width: 100%;
+  /* Изображение участника занимает всю доступную ширину блока */
+  height: 100%;
+  /* Изображение участника занимает всю доступную высоту блока */
+  background-color: white !important;
+  object-fit: cover;
+  /* Изображение участника сохраняет пропорции и центрируется внутри блока */
+}
+
+.contributors-view {
+  color: #ffffff;
+  font-size: 24px;
+  position: absolute;
+  margin-left: 90px;
+  margin-top: 40px;
+  float: left;
+}
+
+.header-but-container {
+  margin-left: 35px;
+}
+
+#invite-button {
+  margin-right: 20px;
+  width: fit-content;
+  background-color: transparent;
+  /* Цвет фона кнопок "Invite"  */
+  color: white;
+  /* Цвет текста кнопок */
+
+  border: none;
+  cursor: pointer;
+  /* Задаем курсор при наведении на кнопки */
+  opacity: 0.8;
+}
+
+#workspace-visible-button {
+  background-color: transparent;
+  text-wrap: nowrap;
+  color: white;
+  /* Цвет текста кнопок */
+  border: none;
+  /* Убираем границу у кнопок */
+  cursor: pointer;
+  /* Задаем курсор при наведении на кнопки */
+  display: block;
+  /* Отображаем кнопки как блочные элементы */
+  width: fit-content;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+
+#invite-button:hover,
+#workspace-visible-button:hover {
+  /* background-color:#12132E;  */
+  /* border-color:#12132E;  */
+}
+
+#profile-icon {
+  font-size: 30px;
+  /* Устанавливаем размер иконки профиля */
+  margin-top: 20px;
+  /* Добавляем отступ сверху */
+}
+
+.board-dropdown {
+  border: none !important;
+}
+
+#board-dropdown-toggle {
+  background-color: transparent;
+  border: none !important;
+  color: rgb(196, 196, 196);
+  /* Устанавливаем белый цвет текста кнопки */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на кнопку */
+  width: fit-content;
+}
+
+.board-dropdown:hover #board-list {
+  display: block;
+}
+
+#board-list {
+  display: none;
+  /* Скрываем список по умолчанию */
+  position: absolute;
+  /* Устанавливаем позиционирование списка как абсолютное, чтобы его можно было свободно размещать в нужном месте */
+  background-color: #303030;
+  /* Устанавливаем цвет фона списка */
+  min-width: 100px;
+  /* Минимальная ширина списка */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Добавляем тень для списка */
+  z-index: 1;
+  /* Устанавливаем z-index, чтобы список отображался поверх других элементов */
+  padding: 0;
+  /* Убираем внутренние отступы у списка */
+  margin: 0;
+  /* Убираем внешние отступы у списка */
+  list-style: none;
+  /* Убираем маркеры списка */
+}
+
+#board-list li {
+  padding: 10px 20px;
+  /* Отступы для каждого элемента списка */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на элемент списка */
+  color: white;
+  /* Устанавливаем белый цвет текста элементов списка */
+}
+
+#board-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Устанавливаем прозрачный белый цвет фона элемента списка при наведении */
+}
+
+/*--------------------------------------------------------------------------------------.board-container #board-button*/
+.board-container #board-button {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.board-container #board-button:hover {
+  background-color: #2d2d30;
+  /* Цвет при наведении курсора */
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------workspace-settings-dropdown*/
+.workspace-settings-dropdown {
+  margin-top: auto;
+  /* Выравниваем блок по нижнему краю */
+  position: relative;
+  /* Необходимо для корректного позиционирования списка */
+  margin-bottom: 30px;
+}
+
+#workspace-list {
+  display: none;
+  /* Скрываем список по умолчанию */
+  position: absolute;
+  /* Устанавливаем позиционирование списка как абсолютное, чтобы его можно было свободно размещать в нужном месте */
+  background-color: #303030;
+  /* Устанавливаем цвет фона списка */
+  min-width: 100px;
+  /* Минимальная ширина списка */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Добавляем тень для списка */
+  z-index: 1;
+  /* Устанавливаем z-index, чтобы список отображался поверх других элементов */
+  padding: 0;
+  /* Убираем внутренние отступы у списка */
+  margin: 0;
+  /* Убираем внешние отступы у списка */
+  list-style: none;
+  /* Убираем маркеры списка */
+  top: 100%;
+  /* Позиционируем список под кнопкой */
+}
+
+#workspace-list li {
+  padding: 10px 20px;
+  /* Отступы для каждого элемента списка */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на элемент списка */
+  color: white;
+  /* Устанавливаем белый цвет текста элементов списка */
+}
+
+#workspace-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Устанавливаем прозрачный белый цвет фона элемента списка при наведении */
+}
+
+.workspace-settings-dropdown:hover #workspace-list {
+  display: block;
+  /* Показываем список при наведении на контейнер с классом workspace-dropdown */
+}
+
+#workspace-settings-dropdown-toggle {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 90%;
+}
+
+#workspace-settings-dropdown-toggle:hover {
+  background-color: #36363a;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------wvs*/
+
+#wvs {
+  font-size: 1vw;
+  /* Устанавливаем размер шрифта заголовка "Project Management" */
+  font-weight: lighter;
+  margin-bottom: 10px;
+  /* Добавляем небольшой отступ снизу */
+}
+
+#wvs1 {
+  font-size: 0.4vw;
+  /* Устанавливаем размер шрифта заголовка "Project Management" */
+  margin-bottom: 5px;
+  /* Добавляем небольшой отступ снизу */
+}
+
+#wvs2 {
+  font-size: 0.4vw;
+  /* Устанавливаем размер шрифта заголовка "Project Management" */
+  margin-bottom: 30px;
+  /* Добавляем небольшой отступ снизу */
+}
+
+/*--------------------------------------------------------------------------------------abel-container button, Calendar-container button*/
+.Tabel-container button,
+.Calendar-container button,
+.sidenav-container button {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.Tabel-container button:hover,
+.Calendar-container button:hover,
+.sidenav-container button:hover {
+  background-color: #2d2d30;
+  /* Цвет при наведении курсора */
+}
+
+.Tabel-container .icon,
+.Calendar-container .icon,
+.sidenav-container .icon {
+  font-size: 20px;
+  /* Размер иконки */
+  margin-right: 10px;
+  /* Отступ между иконкой и текстом */
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------------------------------My-boards-container*/
+.My-boards-container button {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  width: 90%;
+}
+
+.My-boards-container button:hover {
+  background-color: #2d2d30;
+  /* Цвет при наведении курсора */
+}
+
+.My-boards-container button .icon {
+  font-size: 20px;
+  /* Размер иконки */
+  margin-left: 0;
+  /* Отступ между иконкой и текстом */
+  margin-right: 10px;
+}
+
+.icon-plus {
+  margin-left: auto;
+}
+
+
+.My-boards-container-dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: #36363a;
+  min-width: 205px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #36363a;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.My-boards-container-dropdown-menu.show {
+  max-height: 500px; /* Достаточно большая высота, чтобы вмещать все элементы */
+  opacity: 1;
+}
+
+.My-boards-container-dropdown-menu li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.My-boards-container-dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.My-boards-container-dropdown-menu li:hover {
+  background-color: #2d2d30;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+
+header {
+  height: 55px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #161618;
+  color: #c5c6c7;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+#project-title {
+  font-size: 1.5vw;
+  /* Размер шрифта в зависимости от ширины окна браузера */
+  margin-bottom: 30px;
+}
+
+/* Home page layout */
+
+/*===================================== Header block */
+
+.header-conteiner {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-dropdown {
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
+.nav-dropdown {
+  border: none !important;
+}
+
+#nav-dropdown-toggle {
+  background-color: transparent;
+  border: none !important;
+  color: rgb(196, 196, 196);
+  /* Устанавливаем белый цвет текста кнопки */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на кнопку */
+  width: fit-content;
+}
+
+.nav-dropdown:hover #nav-list {
+  display: block;
+}
+
+#nav-list {
+  display: none;
+  /* Скрываем список по умолчанию */
+  position: absolute;
+  /* Устанавливаем позиционирование списка как абсолютное, чтобы его можно было свободно размещать в нужном месте */
+  background-color: #303030;
+  /* Устанавливаем цвет фона списка */
+  min-width: 100px;
+  /* Минимальная ширина списка */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Добавляем тень для списка */
+  z-index: 1;
+  /* Устанавливаем z-index, чтобы список отображался поверх других элементов */
+  padding: 0;
+  /* Убираем внутренние отступы у списка */
+  margin: 0;
+  /* Убираем внешние отступы у списка */
+  list-style: none;
+  /* Убираем маркеры списка */
+}
+
+#nav-list li {
+  padding: 10px 20px;
+  /* Отступы для каждого элемента списка */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на элемент списка */
+  color: white;
+  /* Устанавливаем белый цвет текста элементов списка */
+}
+
+#nav-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Устанавливаем прозрачный белый цвет фона элемента списка при наведении */
+}
+
+.create-container {
+  margin-left: 10px;
+  margin-top: auto;
+}
+
+/* MAIN */
+
+/*======================================================================== SaideBar block */
+
+/* левая часть */
+
+.sidenav {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav-left {
+  width: 300px;
+  background-color: #303030;
+}
+
+.sidenav-button {
+  margin: 5%;
+  margin-left: 20%;
+  padding: 2%;
+}
+
+.sidenav-button-home-page {
+  margin: 5%;
+  margin-left: 20%;
+  padding: 2%;
+}
+
+.sidenav-button-btHpWs {
+  width: 80%;
+  text-align: left;
+  color: #ffffff;
+}
+
+#sidenav-button-temlates-js {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#sidenav-button-temlates-menu-js {
+  display: none;
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: #303030;
+}
+
+#sidenav-button-Ws-js {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#sidenav-button-bIerps-js {
+  display: none;
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: #303030;
+}
+
+/* правая верхняя */
+
+.sidenav-right {
+  overflow: auto;
+  width: 100%;
+  height: fit-content;
+  max-height: 90vh;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+}
+
+.RvWs-config {
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.sidenav-fight {
+  margin-bottom: 10px;
+  height: fit-content;
+  padding-bottom: 20px;
+  background-color: #2b2b2e36;
+  max-width: 100%;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-cards-container {
+  min-height: 145px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.sidenav-card {
+  position: relative;
+
+  width: 250px;
+  height: 125px;
+  margin: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  background-color: #2b2b2e;
+  border: solid 5px rgba(31, 112, 53, 0.15);
+  border-radius: 3%;
+}
+
+.sidenav-sticker {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: fit-content;
+  height: fit-content;
+  bottom: 10px;
+  right: 10px;
+}
+
+.sidenav-sticker-span {
+  padding-left: 10px;
+}
+
+.sidenav-cards-setting {
+  color: white;
+  text-wrap: balanced;
+}
+
+.sidenav-cards-bottom-setting {
+  color: #ffffff;
+}
+
+.sidenav-button-btHpWs-config {
+  color: #ffffff;
+  margin-left: 5px;
+  width: 160px;
+}
+
+/* Header content */
+
+.header-content {
+  display: flex;
+  align-items: flex-end;
+  /* Выравниваем элементы по нижнему краю */
+}
+
+.workspace-dropdown {
+  margin-left: 20px;
+  margin-top: auto;
+  /* Выравниваем блок по нижнему краю */
+}
+
+#workspace-list {
+  display: none;
+  /* Скрываем список по умолчанию */
+  position: absolute;
+  /* Устанавливаем позиционирование списка как абсолютное, чтобы его можно было свободно размещать в нужном месте */
+  background-color: #303030;
+  /* Устанавливаем цвет фона списка */
+  min-width: 100px;
+  /* Минимальная ширина списка */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Добавляем тень для списка */
+  z-index: 1;
+  /* Устанавливаем z-index, чтобы список отображался поверх других элементов */
+  padding: 0;
+  /* Убираем внутренние отступы у списка */
+  margin: 0;
+  /* Убираем внешние отступы у списка */
+  list-style: none;
+  /* Убираем маркеры списка */
+}
+
+#workspace-list li {
+  padding: 10px 20px;
+  /* Отступы для каждого элемента списка */
+  cursor: pointer;
+  /* Устанавливаем курсор в виде указателя при наведении на элемент списка */
+  color: white;
+  /* Устанавливаем белый цвет текста элементов списка */
+}
+
+#workspace-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Устанавливаем прозрачный белый цвет фона элемента списка при наведении */
+}
+
+.workspace-dropdown:hover #workspace-list {
+  display: block;
+  /* Показываем список при наведении на контейнер с классом workspace-dropdown */
+}
+
+#workspace-dropdown-toggle {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#workspace-dropdown-toggle:hover {
+  background-color: #323236;
+}
+
+#search-input {
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid#36363A;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #36363a;
+}
+
+#search-button {
+  background-color: #36363a;
+
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar-container {
+  margin-left: auto;
+}
+
+main {
+  flex: auto;
+  /* overflow: auto; */
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  background: rgb(63, 113, 96);
+  background: linear-gradient(122deg,
+      rgba(63, 113, 96, 1) 0%,
+      rgba(58, 144, 113, 1) 30%,
+      rgba(63, 122, 83, 1) 61%,
+      rgba(73, 107, 75, 1) 100%);
+}
+
+/* Settings */
+
+.settings-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  width: 90%;
+  min-height: fit-content;
+}
+
+.settings-button {
+  width: 62px;
+  height: 62px;
+
+  /* margin-right: 10px;
+    margin-bottom: 10px; */
+
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+}
+
+.settings-button-base {
+  color: white;
+  background-color: #36363a;
+  border: 1px solid #36363a;
+
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+}
+
+.settings-button:hover {
+  background-color: #2d2d30;
+  /* Цвет при наведении курсора */
+}
+
+.img-color-inv {
+  filter: invert(1);
+}
+
+.img-settings-button {
+  width: 32px;
+  height: 32px;
+
+  margin: auto !important;
+}
+
+/*  */
+
+/* It ends here */
+
+/* Cards css */
+
+/* div {
+    border-color: transparent;
+}
+p {
+    border-cnone: transparent;
+} */
+
+.main-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: fit-content;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  /* align-items: center; */
+  /* border-radius: 2%; */
+  background: #383838;
+}
+
+.helping-container {
+  width: 100%;
+  height: fit-content;
+  min-height: 10px;
+  margin-bottom: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-button-conteiner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-card-container {
+  display: inline-flex;
+  flex-direction: row;
+
+  /* margin-bottom: 30px; */
+}
+
+.main-card-p {
+  font-size: large;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: rgb(227, 226, 233);
+}
+
+.main-card-men {
+  font-size: small;
+  position: relative;
+  margin-left: auto;
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+  color: rgb(163, 163, 163);
+  cursor: pointer;
+}
+
+.card-text {
+  color: rgb(227, 226, 233);
+}
+
+.card-main-text {
+  margin-left: 25px;
+  padding-right: 20px;
+}
+
+.card-header-man {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-right: 16px;
+  margin-left: 12px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.main-card {
+  background: #2b2b2e;
+  height: fit-content;
+  width: 90%;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  cursor: grab;
+  transition: box-shadow 0.3s ease;
+  /* Плавный переход для тени */
+}
+
+.main-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+    /* Тень снизу */
+    0 6px 20px rgba(0, 0, 0, 0.19);
+  /* Дополнительная большая тень */
+}
+
+
+.card-tag {
+  color: white !important;
+  background: rgb(33, 33, 34);
+  padding: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: fit-content;
+}
+
+.card-footer-man {
+  margin-top: 16px;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: start;
+}
+
+.card-sm-text {
+  font-size: small;
+}
+
+.text-footer {
+  margin-top: -3px;
+  margin-left: 25px;
+
+  /* margin-left: 10px; */
+  /* margin-top: 5px; */
+}
+
+.card-sm-img {
+  width: 16px;
+  height: 16px;
+
+  filter: invert(1);
+}
+
+.card-m-img {
+  width: 28px;
+  height: 28px;
+}
+
+.plus-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  filter: invert(1);
+}
+
+.clock-img {
+  /* margin-top: 7px; */
+  margin-left: 5px;
+}
+
+.card-plus-but,
+.column-plus-but {
+  position: relative;
+  display: inline-block;
+  width: 270px;
+  /* Ширина кнопки */
+  height: 44px;
+  /* Высота кнопки */
+  cursor: pointer;
+  overflow: hidden;
+  /* Скрытие частей анимации, выходящих за пределы кнопки */
+  margin-top: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.card-plus-but img {
+  width: 28px;
+  /* Ширина изображения "+" */
+  height: 28px;
+  /* Высота изображения "+" */
+}
+
+.card-plus-but span {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+}
+
+.card-plus-but:hover span {
+  opacity: 1;
+  /* При наведении прозрачность изменяется на 1 */
+}
+
+.card-plus-but span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  animation: btn-anim1 1.3s linear infinite;
+  /* Увеличил продолжительность анимации до 1.3 секунды */
+}
+
+.card-plus-but span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  animation: btn-anim2 1.3s linear infinite;
+  /* Увеличил продолжительность анимации до 1.3 секунды */
+  animation-delay: 0.25s;
+}
+
+.card-plus-but span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  animation: btn-anim3 1.3s linear infinite;
+  /* Увеличил продолжительность анимации до 1.3 секунды */
+  animation-delay: 0.5s;
+}
+
+.card-plus-but span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  animation: btn-anim4 1.3s linear infinite;
+  /* Увеличил продолжительность анимации до 1.3 секунды */
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* @keyframes cpb-hover {
+    from {
+        border: solid 1px rgba(255, 255, 255, 0);
+    }
+    to {
+        border: solid 1px rgb(255, 255, 255);
+    }
+} */
+
+/* @keyframes cpb-hover-img {
+    from {
+        filter: invert(1);
+    }
+    to {
+        filter: invert(0.4);
+    }
+} */
+
+.only-cards-container {
+  width: 100%;
+  height: 100%;
+}
+
+.sm-mar-l {
+  margin-left: 5px;
+}
+
+.m-mar-l {
+  margin-left: 15px;
+}
+
+.b-mar-l {
+  margin-left: 25px;
+}
+
+.main-cards-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.create-column-container {
+  background-color: #2b2b2e;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+/* Ends here */
+
+/* Animation screens css */
+
+/* Ends here */
+
+/* Modal CRUD */
+
+.modal {
+  display: absolute;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.modal-inside-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  width: 500px;
+  height: 300px;
+  background-color: #404042;
+
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.main-container-modal {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.main-content-modal {
+  flex-grow: 1;
+  height: 90%;
+  position: relative;
+}
+
+.img-container-modal {
+  margin-top: 40px;
+  margin-right: 20px;
+  align-content: flex-start;
+  height: 90%;
+  width: 45%;
+}
+
+.img-modal-item {
+  height: 80%;
+  margin-left: 10px;
+  margin-top: 20px;
+  transform: scale(1.2, 1.2);
+}
+
+.button-confirm-container-modal {
+  height: 90%;
+}
+
+.button-confirm-modal {
+  width: 150px;
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+
+.input-modal {
+  margin-top: 10px;
+  /* margin-right: 20px; */
+  background:#404042;
+  color: white;
+  width: 100%;
+
+}
+
+.input-modal option {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.input-modal option:hover {
+  background-color: #444444;
+}
+
+.input-modal:focus{
+  outline: transparent;
+  background:#404042;
+  color: white;
+}
+
+.input-datepicker {
+  background-color: transparent;
+  color: white
+}
+
+.input-datepicker:focus{
+  outline: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+.create-column-form {
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+input[type="text"],
+textarea {
+  background-color: #404042;
+  color: white;
+}
+
+input[type="text"]:focus {
+  background-color: #404042;
+  border: solid 1.5px #ffffff;
+}
+
+.modal-title {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.create-form {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.close-modal {
+  display: none !important;
+}
+
+.clos-modal {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  color: rgb(121, 116, 116);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.modal-inside-container-board {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  width: 800px;
+  height: 500px;
+  background-color: #404042;
+
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.modal-inside-container-board-index {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  width: fit-content;
+  max-width: 500px;
+  height: 500px;
+  background-color: #404042;
+
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+.modal-fight {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  background-clip: content-box;
+  padding: 20px;
+  width: 50%;
+}
+
+.modal-fight-index {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  background-clip: content-box;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal-input-team {
+  display: inline-flex;
+  position: relative;
+}
+
+.team-input-select {
+  width: 100%;
+  height: 50px;
+
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid #48484c;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 16px;
+  background-color: #2f2f33;
+}
+
+.modal-button-team {
+  margin-left: auto;
+}
+
+.modal-button-team-settings {
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.modal-button-team-settings-mid {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 0px 0px 0px 0px;
+}
+
+.img-team-plus-button,
+.img-team-search-button {
+  width: 15px;
+  height: 15px;
+
+  margin: auto !important;
+}
+
+.create-team-button {
+  background-color: #2b2b2e;
+  margin-top: 15px;
+  width: 48%;
+}
+
+.under-buttons-container {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.team-list-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.team-list {
+  margin: auto;
+  background-color: rgb(55, 54, 56);
+  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%;
+  border: solid 1px #4d4d52;
+  width: 100%;
+  height: 90%;
+}
+
+.team-list-item {
+  /* margin: 10px 5px; */
+  padding: 10px 5px 5px 5px;
+  border-radius: 25px;
+  background-color: #2b2b2e;
+  background-clip: content-box;
+  width: 100%;
+}
+
+.team-list-item-content, .team-list-item-content-act {
+  margin-left: 10px;
+  margin-top: 5px;
+
+  width: 100%;
+  padding-right: 20px;
+
+  display: inline-flex;
+}
+
+.users-select .team-list-item-content:click {
+  background-color: #161618;
+}
+
+.team-list-text {}
+
+.cross-team-list {
+  margin-left: auto;
+  width: fit-content;
+  height: 32px;
+  display: inline-flex;
+}
+
+.cross-ico-team-list {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+
+  filter: invert(0.5);
+  margin-left: 10px;
+}
+
+.cross-ico-task {
+  filter: invert(0.5);
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+
+.template-parent-container {
+  width: 100%;
+  height: 80%;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.template-container {
+  width: 170px;
+  height: 170px;
+  padding-left: 10px;
+  padding-top: 15px;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.template-custom {
+  background-color: #2e2d31;
+}
+
+.template-picker {
+  background-color: #dadada3f;
+  border: dotted 2px white;
+}
+
+.without-template-button {
+  margin-top: 33px;
+  width: 100%;
+}
+
+.users-select {
+  position: absolute;
+  left: 0;
+  top: 50px;
+
+  width: 100%;
+  height: fit-content;
+  min-height: 0px;
+  max-height: 300px;
+  padding : 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #222224;
+
+  z-index: 2;
+  
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.226);
+}
+
+/* Ends here */
+
+/*======================================== POPUP-WINDOW */
+
+.popup-window {
+  background-color: #404040;
+  position: absolute;
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid #c5c6c7 1px; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.233);
+}
+
+.popup-window-header {
+  display: flex;
+  color: #ffffff;
+  font-size: medium;
+  font-weight: 500;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 7%;
+  margin-bottom: 10%;
+}
+
+.popup-window-header-img-close-button-cross {
+  margin-left: auto;
+  margin-right: 15px;
+  height: fit-content;
+  font-size: small;
+  font-size: 10px;
+  color: #676767;
+  text-decoration: none;
+}
+
+.popup-window-hr-setting {
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  width: 90%;
+}
+
+.pop-over-acms {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.pop-over-acms-left {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-over-acms-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-over-acms-settings {
+  color: #ffffff;
+  flex-wrap: nowrap;
+  font-size: small;
+  margin-top: 2.5%;
+  width: 100%;
+}
+
+.pop-over-sort {
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.sort-cards {
+  width: 100%;
+  color: #ffffff;
+}
+
+.pop-over-list {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.section-title-automation {
+  color: #ffffff;
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.section-title-automation-setting {
+  color: #ffffff;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.menu-item {
+  margin-top: 2.5%;
+  width: 95%;
+  text-align: left;
+  color: #ffffff;
+}
+
+.menu-item-text {
+  font-size: small;
+}
+
+.pop-over-list-MaCards {
+  margin-top: 2.5%;
+  color: #ffffff;
+  text-align: left;
+  font-size: small;
+  width: 100%;
+}
+
+.close-list {
+  margin-top: 2.5%;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.menu-item:hover,
+.pop-over-list-MaCards:hover,
+.close-list:hover,
+.pop-over-acms-left:hover,
+.pop-over-acms-right:hover,
+.pop-over-sort:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Side panel */
+
+.side-panel-card {
+  overflow: hidden;
+  position: fixed;
+  transform: translate(0, -50%);
+  right: -65%;
+  top: 50%;
+  background-color: #222;
+    color: white;
+    font-family: sans-serif;
+  width: 65%;
+  height: 99%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.labels-window {
+  position: absolute;
+  border-radius: 10px;
+  top: 0px;
+  background: #404042;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  left: 10px;
+}
+
+.label-item {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+  background: #222;
+  border-radius: 5px;
+}
+
+.label-item.hover {
+  border: 1px solid #fff;
+}
+
+/* .label-item.selected::after {
+  content: '✔️';
+  margin-left: 5px;
+  color: green;
+  background-color: red;
+} */
+
+.label-item.selected {
+  margin-left: 10px;
+  color: green;
+}
+
+
+
+
+
+
+.members-window {
+  position: absolute;
+  top: 0px;
+  background:#404042;
+  padding: 10px;
+  width: 300px;
+  max-height: 400px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.members-section {
+  margin-bottom: 20px;
+}
+
+.members-section h3 {
+  margin: 0 0 10px;
+}
+
+.member-item {
+  padding: 5px;
+  cursor: pointer;
+  background: #222;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+/* Account */
+
+
+
+
+
+
+
+
+

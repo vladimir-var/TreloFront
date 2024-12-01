@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="jquery/node_modules/js-cookie/dist/js.cookie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src ="columnPattern.js"></script>
+    <script src="Settings/userSettings.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Settings/userSettings.css">
+  <script src="home_page.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="header-main-text" href="#">Chello</h1>
+    <div class="header-conteiner">
+      <div class="workspace-dropdown">
+        <button type="button" id="workspace-dropdown-toggle">Workspaces ▼</button>
+        <ul id="workspace-list">
+          <li>workspace 1</li>
+          <li>workspace 2</li>
+          <li>workspace 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-but-container d-inline-flex">
+
+
+      <div class="nav-dropdown">
+        <button type="button" id="nav-dropdown-toggle">Recent ▼</button>
+        <ul id="nav-list">
+          <li>recent 1</li>
+          <li>recent 2</li>
+          <li>recent 3</li>
+        </ul>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" id="nav-dropdown-toggle">Favorites ▼</button>
+        <ul id="nav-list">
+          <li>Favorites 1</li>
+          <li>Favorites 2</li>
+          <li>Favorites 3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <button type="button" id="nav-dropdown-toggle">Templates ▼</button>
+      <ul id="nav-list">
+        <li>Templates 1</li>
+        <li>Templates 2</li>
+        <li>Templates 3</li>
+      </ul>
+    </div>
+    <a href="#create_board" rel="modal:open">
+      <div class="create-container">
+        <button class="btn btn-outline-light" type="button" id="create-button">Create</button>
+      </div>
+    </a>
+    </div>
+
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" id="search-input">
+        <button type="button" id="search-button"><img src="assets/search-interface-symbol.png"
+            class="card-sm-img">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="content-home">
+    <aside id="aside-container">
+      <article class="aside-h-container">
+        <h2 id="project-title">Home
+        </h2>
+      </article>
+      <hr class="aside-line" />
+      <div class="sidenav-container">
+        <a href="#create_board" rel="modal:open">
+        <button type="button">
+          <span class="icon">
+            <img src="assets/plus.png" class="card-sm-img" />
+          </span> Create board
+        </button>
+        </a>
+        <button type="button">
+          <span class="icon">
+            <img src="assets/colum-modal-img.png" class="card-sm-img" />
+          </span> Templates
+        </button>
+      </div>
+      <!-- <hr class="aside-line" /> -->
+      <!-- <div class="My-boards-container">
+        <button type="button">
+          <span class="icon">
+            <img src="assets/board-meeting.png" class="card-sm-img" />
+          </span>My boards<span class="icon-plus">&#43;</span>
+        </button>
+      </div> -->
+
+      <hr class="aside-line" />
+
+      <div class="settings-container">
+        <button type="button" class="settings-button" id="settings-button-js">
+          <img src="assets/settings-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/bubble-chat-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/user-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/group-icon-2.png" class="img-color-inv img-settings-button" />
+        </button>
+      </div>
+
+    </aside>
+
+
+    <div class="sidenav-right">
+      <div class="sidenav-fight">
+        <div class="RvWs-config"> <!-- RvWs - рассшифровка Rv- Recently Viewed, Ws - Working space -->
+          <h5 style="color: azure;">Recently Viewed</h5>
+        </div>
+
+        <div class="sidenav-cards-container" id="Recent">
+          <!-- <div class="sidenav-cards-top sidenav-card" id="card-id-1">
+            <div class="sidenav-cards-setting">
+              Project menagment
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">👻</span>
+              <span class="sidenav-sticker-span">⭐</span>
+            </div>
+          </div>
+          <div class="sidenav-cards-top sidenav-card" id="card-id-4">
+            <div class="sidenav-cards-setting">
+              Good project (We're doing something good for our planet)
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">😺</span>
+            </div>
+            
+          </div> -->
+        </div>
+      </div>
+      <div class="sidenav-fight">
+        <div class="RvWs-config">
+          <h5 style="color: azure;">Boards</h5>
+          <!-- <button>Boards</button>
+          <button>Important events</button>
+          <button>Representation</button>
+          <button>Participants</button>
+          <button>Settings</button> -->
+        </div>
+        <div class="sidenav-cards-container" id="AllBoards">
+          <!-- <div class="sidenav-cards-bottom sidenav-card" id="card-id-1">
+            <div class="sidenav-cards-setting">
+              Project menagment
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">👻</span>
+              <span class="sidenav-sticker-span">⭐</span>
+            </div>
+          </div>
+
+          <div class="sidenav-cards-bottom sidenav-card" id="card-id-2">
+            <div class="sidenav-cards-setting">
+              Chello front-end
+            </div>
+            <div class="sidenav-sticker">
+              <span>😆</span>
+            </div>
+          </div>
+          <div class="sidenav-cards-bottom sidenav-card" id="card-id-3">
+            <div class="sidenav-cards-setting">
+              Good project (We're doing something good for our planet)
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">😺</span>
+            </div>
+          </div>
+          <div class="sidenav-cards-bottom sidenav-card" id="card-id-4">
+            <div class="sidenav-cards-setting">
+              Game: Team Defend
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">🤑</span>
+            </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="sidenav-fight">
+        <div class="RvWs-config"> <!-- RvWs - рассшифровка Rv- Recently Viewed, Ws - Working space -->
+          <h5 style="color: azure;">Favorites</h5>
+        </div>
+
+        <div class="sidenav-cards-container" id="Favorite">
+          <!-- <div class="sidenav-cards-top sidenav-card" id="card-id-1">
+            <div class="sidenav-cards-setting">
+              Project menagment
+            </div>
+            <div class="sidenav-sticker">
+              <span class="sidenav-sticker-span">👻</span>
+              <span class="sidenav-sticker-span">⭐</span>
+            </div>
+          </div> -->
+      </div>
+    </div>
+    </div>
+    </div>
+  </main>
+
+  <div class="d-none">
+    <div id="create_board" class="modal">
+      <div class="modal-inside-container-board rounded-2">
+          <div class="main-container-modal">
+            <div class="modal-fight">
+              <div class="modal-input-team">
+                <input placeholder="Search user" id="search_user_input" class="team-input-select form-select" />
+                <div class="users-select" style="display: none;">
+                  
+                </div>
+                <!-- <a class="modal-button-team"> -->
+                  <button  type="button" class="settings-button-base modal-button-team-settings-mid" id="searchButton">
+                    <img src="assets/search-interface-symbol.png" class="img-color-inv img-team-search-button" />
+                </button>
+                  <button id="search_user_button" type="button" class="settings-button-base modal-button-team-settings">
+                      <img src="assets/plus.png" class="img-color-inv img-team-plus-button" />
+                  </button>
+                <!-- </a>              -->
+              </div>
+              <!-- <div class="under-buttons-container">
+                <a href="#create-team" rel="modal:open" class="btn btn-outline-light create-team-button">
+                  Serch a user
+                </a>
+                <button class="btn btn-outline-light create-team-button">Friend list</button>
+              </div> -->
+              
+
+              <div class="team-list-container">
+                <div class="team-list">
+                  <div class="team-list-item">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-fight">
+              <div class="template-parent-container">
+                <div class="template-container template-custom">
+                  Default template
+                </div>
+                <div class="template-container template-custom">
+                  Todo template
+                </div>
+                <div class="template-container template-custom">
+                  Rating template
+                </div>
+                <div class="template-container template-picker">
+                  Custom template
+                </div>
+              </div>
+              <div class="btn btn-outline-light without-template-button" id="boardCreationWithoutTemplate">Start without template</div>
+            </div>  
+          </div>
+      </div>
+    </div> 
+
+    <div id="create-team" class="modal">
+      <div class="modal-inside-container rounded-2">
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

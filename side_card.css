@@ -1,0 +1,304 @@
+
+  
+  .side-card-container {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.side-card-left-side {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  background-color: #333;
+  border-right: 1px solid #444;
+}
+
+.side-card-right-side {
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  background-color: #2b2b2b;
+}
+
+.side-card-text h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.side-card-section {
+  margin-bottom: 20px;
+  background-color: #232a25;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.side-card-section-content{
+  margin-bottom: 20px;
+}
+
+.side-card-section-comments{
+  height: auto;
+}
+
+.side-card-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.side-card-section-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.side-card-section-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.side-card-section-content {
+  margin-top: 10px;
+}
+
+.side-card-section-content textarea, .side-card-section-content input[type="text"] {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #444;
+  resize: vertical;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.side-card-section-content input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.side-card-section-content label {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.side-card-section-content button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #367c38;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.side-card-section-content button:hover {
+  background-color: #45a049;
+}
+
+.side-card-right-side .side-card-section-content {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  margin-bottom: 10px;
+}
+
+.side-card-right-side .side-card-section-content button {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-card-right-side .side-card-section-content .side-card-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.side-card-right-side .side-card-section-content .side-card-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.side-card-right-side .side-card-section-content .side-card-label .side-card-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.side-card-right-side .side-card-section-content .side-card-label .side-card-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.side-card-right-side .side-card-section-content .side-card-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.side-card-comment-section {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.side-card-comment-section textarea {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.side-card-comment-section button {
+  padding: 8px 15px;
+}
+
+.side-card-progress-bar {
+  width: 100%;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 16px; /* Уменьшаем высоту */
+}
+
+.side-card-progress-bar-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  text-align: right; /* Выравниваем текст по правому краю */
+  line-height: 10px; /* Высота строки равна высоте progress bar */
+  color: white;
+  padding-top: 4px;
+  border-radius: 5px;
+  padding-right: 5px; /* Добавляем немного отступа справа */
+}
+
+.side-card-clickable {
+  text-decoration: underline;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+.side-card-image-container img {
+  width: 100px;
+  height: 60px;
+}
+
+
+.side-card-comments-container{
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 200px;
+  width: 100%;
+  background-color: #2b2b2e;
+  margin-top: 20px;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.user-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #7289da;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment-content {
+  background-color: #2c2f33;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #b9bbbe;
+}
+
+.comment-body {
+  margin-bottom: 10px;
+}
+
+.comment-actions span {
+  font-size: 12px;
+  color: #b9bbbe;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.side-card-section-content-tasks-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.actualy-task-container {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  margin-top: 5px;
+  background-color: #1f1f1f;
+  height: 30px;
+  justify-content: center;
+  margin-right: 5px;
+  padding-top: 3px;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+.task-text {
+  margin-right: 10px;
+
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #46464d; 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2c35; 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #2e2e2e; 
+}

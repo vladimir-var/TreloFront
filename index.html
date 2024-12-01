@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chello</title>
+
+    <link rel="preload" href="fonts/FloridaVibes.otf" as="font">
+    <link rel="preload" href="fonts/Dearlove.ttf" as="font">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery/dragula/node_modules/dragula/dist/dragula.min.js"></script>
+    <script src="jquery/dragula/node_modules/dragula/dist/dragula.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="jquery/node_modules/js-cookie/dist/js.cookie.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+    <script src="index.js"></script>
+    <script src="Settings/userSettings.js"></script>
+    <script src="columnPattern.js"></script>
+    <script src="ciLib.js"></script>
+    <script src="OurModules/team-work/teamManipulations.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="side_card.css">
+    <link rel="stylesheet" href="ciStyles.css">
+    <link rel="stylesheet" href="Settings/userSettings.css">
+
+</head>
+
+<body>
+
+  <!-- for git -->
+
+  <header>
+    <h1 class="header-main-text">Chello</h1>
+    <div class="header-content">
+      <div class="workspace-dropdown">
+        <button type="button" id="workspace-dropdown-toggle">Workspace ▼</button>
+        <ul id="workspace-list">
+          <li>workspace 1</li>
+          <li>workspace 2</li>
+          <li>workspace 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-but-container d-inline-flex">
+      <div class="invite-container">
+        <button type="button" id="invite-button">Invite</button>
+      </div>
+      <div class="workspace-visible-container">
+        <button type="button" id="workspace-visible-button">Workspace Visible</button>
+      </div>
+      <div class="board-dropdown">
+        <button type="button" id="board-dropdown-toggle">Board ▼</button>
+        <ul id="board-list">
+          <li>Board 1</li>
+          <li>Board 2</li>
+          <li>Board 3</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" id="search-input">
+        <button type="button" id="search-button"><img src="assets/search-interface-symbol.png"
+            class="card-sm-img"></button>
+
+
+
+            </div>
+        </div>
+        
+    </header>
+
+
+
+    <main id="content">
+        <aside>
+            <article class="aside-h-container">
+                <!-- <h2 id="project-title" 
+                    data-ci-id="1"  
+                    data-req-var-name="name"
+                    data-ci-url="https://localhost:7193/api/bords%CISLASH:selfdata[boardid]=boardid">
+                        Project Management
+                </h2> -->
+            </article>
+
+      <hr class="aside-line" />
+
+      <!-- <div class="board-container">
+                <button type="button" id="board-button">Boards</button>
+            </div>
+
+            <div class="workspace-settings-dropdown">
+                <button type="button" id="workspace-settings-dropdown-toggle">Workspace-setting ▼</button>
+                <ul id="workspace-list">
+                    <li>setting 1</li>
+                    <li>setting 2</li>
+                    <li>setting 3</li>
+                </ul>
+            </div> -->
+
+      <h2 id="wvs">Workspace viewing modes</h2>
+
+      <div class="Tabel-container">
+        <button type="button">
+          <span class="icon">
+            <img src="assets/cells-icon-1.png" class="card-sm-img" />
+          </span> Tables
+        </button>
+      </div>
+
+      <div class="Calendar-container">
+        <button type="button">
+          <span class="icon">
+            <img src="assets/calendar-icon-1.png" class="card-sm-img" />
+          </span>Calendar
+        </button>
+      </div>
+
+      <hr class="aside-line" />
+
+      <div class="My-boards-container">
+        <button type="button" id="My-boards-button">
+          <span class="icon">
+            <img src="assets/board-meeting.png" class="card-sm-img" />
+          </span>My boards<span class="icon-plus">&#43;</span>
+        </button>
+        <ul class="My-boards-container-dropdown-menu">
+          <a style="color: white; text-decoration: none;" href="http://127.0.0.1:5500/home_page_layout.html">
+            <li>...</li>
+          </a>
+        </ul>
+      </div>
+
+      <hr class="aside-line" />
+
+      <div class="settings-container">
+        <button type="button" class="settings-button" id="settings-button-js">
+          <img src="assets/settings-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/brush-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/bubble-chat-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <button type="button" class="settings-button">
+          <img src="assets/user-icon-1.png" class="img-color-inv img-settings-button" />
+        </button>
+        <a href="#team-manipulation" rel="modal:open">
+          <button type="button" class="settings-button" id="team-man">
+            <img src="assets/group-icon-2.png" class="img-color-inv img-settings-button" />
+          </button>
+        </a>
+        <a href="#create-column" rel="modal:open">
+          <button type="button" class="settings-button">
+            <img src="assets/plus.png" class="img-color-inv img-settings-button" />
+          </button>
+        </a>
+      </div>
+
+
+      <!-- <div class="participants-container">
+                <div class="participant" id="participant1">
+                    <img src="assets/avatar_face_girl_female_woman_profile_smiley_happy_people_icon_181662.png" alt="Participant 1">
+                </div>
+                <div class="participant" id="participant2">
+                    <img src="assets/avatar_face_girl_female_woman_profile_smiley_happy_people_icon_181665.png" alt="Participant 2">
+                </div>
+            </div> -->
+
+
+    </aside>
+
+
+    <article class="main-cards-container">
+    </article>
+
+  </main>
+
+  <div class="side-panel-card">
+    <div class="side-card-left-side">
+      <h1 class="side-card-side-card-text">PLACEHOLDERtitl</h1>
+      <p class="side-card-side-card-column-text">PLACEHOLDERcolumn</p>
+
+      <!-- <div class="side-card-section">
+        <div class="side-card-section-header">
+          <i class="side-card-section-icon">🔔</i>
+          <h2 class="side-card-section-title">Notifications</h2>
+        </div>
+        <div class="side-card-section-content">
+          <button>Subscribe</button>
+        </div>
+      </div> -->
+
+      <div class="side-card-section">
+        <div class="side-card-section-header">
+          <i class="side-card-section-icon">📝</i>
+          <h2 class="side-card-section-title">Description</h2>
+        </div>
+        <div class="side-card-section-content">
+          <textarea placeholder="Add more detailed description..."></textarea>
+        </div>
+      </div>
+
+      <div id="task-cont-div">
+
+      </div>
+
+      <!-- <div class="side-card-section">
+        <div class="side-card-section-header">
+          <i class="side-card-section-icon">📝</i>
+          <h2 class="side-card-section-title">Tasks</h2>
+        </div>
+        <div class="side-card-progress-bar">
+          <div class="side-card-progress-bar-fill" style="width: 0%;"><span style="font-size: 12px;">0%</span></div>
+        </div>
+        <div class="side-card-section-content">
+          <div style="margin-bottom: 10px;">
+            <input type="checkbox" id="task1">
+            <label for="task1">First task</label>
+            <input type="checkbox" id="task2">
+            <label for="task2">Second task</label>
+            <input type="checkbox" id="task3">
+            <label for="task3">Third task</label>
+          </div>
+          <button>Add element</button>
+          <button>Delete</button>
+        </div>
+      </div> -->
+
+      <div class="side-card-section side-card-section-comments">
+        <div class="side-card-section-content">
+          <textarea placeholder="Write a comment..." id="commentText"></textarea>
+          <button id="commentSaveButton">Save coment</button>
+        </div>
+        <div class="side-card-comments-container">
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card-right-side">
+      <div class="side-card-section">
+        <div class="side-card-section-content">
+          <p>Add to card</p>
+          <button id="showMembersBtn">
+            <i class="side-card-icon">👥</i>
+            <span class="side-card-text">Members</span>
+        </button>
+        <div style="position: relative;">
+          <div id="membersPopup" class="members-window" style="display: none;">
+            <div class="members-section">
+                <h3>Members on Card</h3>
+                <div id="cardMembersList"></div>
+            </div>
+            <div class="members-section">
+                <h3>Members on Board</h3>
+                <div id="boardMembersList"></div>
+            </div>
+        </div>
+        </div>
+        
+        
+        <button id="showLabelsBtn">
+          <i class="side-card-icon">🏷️</i>
+          <span class="side-card-text">Labels</span>
+      </button>
+      <div style="position: relative;">
+        <div id="labelsPopup" class="labels-window" style="display: none;">
+          <div id="labelsList"></div>
+          <input type="text" id="newLabelName" placeholder="enter tag name">
+          <button id="createLabelBtn">Create tag</button>
+      </div>
+      </div>
+      
+      
+        
+
+            <i class="side-card-icon">📝</i>
+            <span class="side-card-text">Checklist</span>
+          </button>
+          <button>
+            <i class="side-card-icon">📆</i>
+            <span class="side-card-text">Dates</span>
+          </button>
+          <button>
+            <i class="side-card-icon">📁</i>
+            <span class="side-card-text">Attachment</span>
+          </button>
+          <button>
+            <i class="side-card-icon">📚</i>
+            <span class="side-card-text">Cover</span>
+          </button>
+          <button>
+            <i class="side-card-icon">📊</i>
+            <span class="side-card-text">Custom Fields</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="side-card-section">
+        <div class="side-card-section-content">
+          <div class="side-card-label">
+            <i class="side-card-icon">🔄</i>
+            <span class="side-card-text">Automation</span>
+          </div>
+          <button>Add Button</button>
+        </div>
+      </div>
+
+      <div class="side-card-section">
+        <div class="side-card-section-content">
+          <div class="side-card-label">
+            <i class="side-card-icon">💬</i>
+            <span class="side-card-text">Actions</span>
+          </div>
+          <div class="side-card-button-group">
+            <button>
+              <i class="side-card-icon">🔄</i>
+              <span class="side-card-text">Move</span>
+            </button>
+            <button>
+              <i class="side-card-icon">📋</i>
+              <span class="side-card-text">Copy</span>
+            </button>
+          </div>
+          <div class="side-card-button-group">
+            <button>
+              <i class="side-card-icon">📝</i>
+              <span class="side-card-text">Create Template</span>
+            </button>
+            <button>
+              <i class="side-card-icon">🗑️</i>
+              <span class="side-card-text">Archive</span>
+            </button>
+          </div>
+          <button>
+            <i class="side-card-icon">📢</i>
+            <span class="side-card-text">Share</span>
+          </button>
+          <button class="delete-card-button">
+            <i class="icon">🗑️</i>
+            <span class="text">Delete card</span>
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-none">
+    <div id="create" class="modal">
+      <div class="modal-inside-container rounded-2">
+        <span class="clos-modal" id="closeModalBtn">&#11198;</span>
+        <div class="main-container-modal">
+          <div class="img-container-modal">
+            <img class="img-modal-item" src="assets/column-ico-4.svg">
+          </div>
+          <div class="main-content-modal">
+
+            <p class="modal-title">Create card</p>
+            <form class="create-column-form" method="POST" id="createOperation">
+              <input id="titleCardCreate" placeholder="Title" type="text" class="input-modal form-control" />
+              <input id="dateCardCreate" placeholder="" class="input-modal input-datepicker form-control" type="date" />
+              <input style="display: none;" id="idcolCardCreate" type="number" readonly class="input-modal form-control" />
+           
+              <div class="button-confirm-container-modal">
+                <button class="button-confirm-modal btn btn-outline-light" type="button"
+                  id="buttonCardCreate">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="create-column" class="modal">
+        <div class="modal-inside-container rounded-2">
+          <span class="clos-modal" id="closeColumnModalBtn">&#11198;</span>
+          <div class="main-container-modal">
+            <div class="img-container-modal">
+              <img class="img-modal-item" src="assets/column-ico-4.svg">
+            </div>
+            <div class="main-content-modal">
+              <p class="modal-title">Create column</p>
+              <form class="create-column-form" method="POST" id="createColumnOperation">
+                <input type="text" class="input-modal form-control" id="titleColumnCreate" placeholder="Title">
+                <div class="button-confirm-container-modal">
+                  <button class="button-confirm-modal btn btn-outline-light" type="button"
+                    id="buttonColumnCreate">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="team-manipulation" class="modal">
+        <div class="modal-inside-container-board-index rounded-2">
+            <div class="main-container-modal">
+              <div class="modal-fight-index">
+                <div class="modal-input-team">
+                  <input placeholder="Search user" id="search_user_input" class="team-input-select form-select" />
+                  <!-- <a class="modal-button-team"> -->
+                    <button  type="button" class="settings-button-base modal-button-team-settings-mid" id="searchButton">
+                      <img src="assets/search-interface-symbol.png" class="img-color-inv img-team-search-button" />
+                  </button>
+                    <button id="search_user_button" type="button" class="settings-button-base modal-button-team-settings">
+                        <img src="assets/plus.png" class="img-color-inv img-team-plus-button" />
+                    </button>
+                  <!-- </a>              -->
+                  <div class="users-select" style="display: none;">
+                  
+                  </div>
+                </div>
+                
+                <!-- <div class="under-buttons-container">
+                  <a href="#create-team" rel="modal:open" class="btn btn-outline-light create-team-button">
+                    Serch a user
+                  </a>
+                  <button class="btn btn-outline-light create-team-button">Friend list</button>
+                </div> -->
+                
+  
+                <div class="team-list-container">
+                  <div class="team-list">
+                    <div class="team-list-item">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="modal-fight">
+                <div class="template-parent-container">
+                  <div class="template-container template-custom">
+                    Default template
+                  </div>
+                  <div class="template-container template-custom">
+                    Todo template
+                  </div>
+                  <div class="template-container template-custom">
+                    Rating template
+                  </div>
+                  <div class="template-container template-picker">
+                    Custom template
+                  </div>
+                </div>
+                <div class="btn btn-outline-light without-template-button" id="boardCreationWithoutTemplate">Start without template</div>
+              </div>   -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
